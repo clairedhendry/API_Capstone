@@ -13,17 +13,22 @@ body {
         "header header header header"
         "main main main main"
         "footer footer footer footer";
+    background-color: rgb(199, 198, 198);
 }
 
 .hidden {
     display: none;
 }
 
+.invisible {
+    visibility: hidden;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(199, 198, 198);
+    
     width: 100vw;
     height: auto;
 }
@@ -49,7 +54,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(4, 100px);
-    justify-items: stretch;
+    justify-items: center;
     margin-top: auto;
     margin-bottom: auto;
     
