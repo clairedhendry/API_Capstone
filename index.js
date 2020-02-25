@@ -1,7 +1,7 @@
 "use strict"
 
 
-const searchUrl = `https://pixabay.com/api/?key=15386213-fd2b415b0403776dbc63e2f69`
+const searchUrl = ``
 
 function generateHomePage() {
 // generates HTML for home page
