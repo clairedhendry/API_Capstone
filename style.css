@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+.hidden {
+    display: none;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(199, 198, 198);
+    width: 100vw;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    grid-area: header;
+    text-align: center;
+
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    
+}
+
+.color-picker {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    justify-items: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.color-picker > input {
+    width: 50px;
+    height: 50px;
+}
+
+#red {
+    background-color: red;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 4;
+    grid-row: 1;
+}
+
+#purple {
+    background-color: purple;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 2
+}
+
+#black {
+    background-color: black;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 4;
+    grid-row: 2;
+}
+
+
+#orange {
+    background-color: orange;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 6;
+    grid-row: 2;
+}
+
+#white {
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#grey {
+    background-color: grey;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 5;
+    grid-row: 3;
+}
+
+#blue {
+    background-color: blue;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#green {
+    background-color: green;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 4;
+    grid-row: 4;
+}
+
+
+#yellow {
+    background-color: yellow;
+    border: 4px solid black;
+    border-radius: 50%;
+    grid-column: 6;
+    grid-row: 4;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    grid-area: footer;
+   
+
+}

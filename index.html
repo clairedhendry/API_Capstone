@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Image Generator</title>
+    <meta author="Claire Hendry">
+    <meta name="description" content="An app to generate a slideshow of randomly selected nature photos based on your color choice.">
+    <link type="text/css" rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+
+    <header>
+        <h1>Choose a color</h1>
+    </header>
+
+    <main role="main" class="main-container">
+
+        
+        <div class="homepage">  
+            <div class="color-picker">
+                <input id="red"></input>
+                <input id="purple"></input>
+                <input id="black"></input>
+                <input id="orange"></input>
+                <input id="white"></input>
+                <input id="grey"></input>
+                <input id="blue"></input>
+                <input id="green"></input>
+                <input id="yellow"></input>
+            </div>
+        </div>
+        
+
+        <section class="slideshow-section hidden">
+            <div class="slideshow">
+
+            </div>
+            <div class="color-picker">
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer>Claire D Hendry 2020</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>    
+</body>
+</html>
