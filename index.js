@@ -1,24 +1,55 @@
 "use strict"
 
 
-const searchUrl = ``
+const searchUrl = `https://pixabay.com/api/?key=15386213-fd2b415b0403776dbc63e2f69`
 
 function generateHomePage() {
 // generates HTML for home page
 }
 
-function generateSlideShow() {
-// generates slideshow
-// uses the getImages(color, category) function to populate slideshow
-}
+function generateSlideShow(responseJson) {
+    $(".second-color-picker").addClass("hidden");
+    $(".slideshow-section").removeClass("hidden");
+    
+
+    for (let i = 0; i < responseJson.hits.length; i++) {
+        $(".slideshow-container").append(
+            `<div class="slides fade">
+            <img src=${responseJson.hits[i].largeImageURL} alt=${responseJson.hits[i].tags} style="width:100%"/>
+            </div>`
+        )
+    }
+  }
+
+  var slideIndex = 0;
+  
+
+  
+  function showSlides() {
+ 
+    
+    let slides = document.getElementsByClassName("slides");
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    };
+    
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    };
+    
+    slides[slideIndex - 1].style.display = "block";
+    
+    setTimeout(showSlides, 300000); 
+  }
+
 
 function getHomePageImage(url) {
+ 
 
 }
-
-// function formatQueryParams(params) {
-//     return ``
-// }
 
 function getImages(colorName, category) {
 
@@ -27,9 +58,6 @@ function getImages(colorName, category) {
 
     const queryField = searchUrl + `&` + searchCategory + `&image_type=photo&category=nature&orientation=portrait` + `&` + searchColor;
 
-    // const params =
-
-    // const queryString = formatQueryParams(params);
 
     fetch(queryField)
     .then(response => {
@@ -39,15 +67,13 @@ function getImages(colorName, category) {
             throw new Error(response.statusText);
         }
     })
-    .then(responseJson => console.log(responeJson))
+    .then(responseJson => generateSlideShow(responseJson))
     .catch(err => {
         $("#error-message").text(`Something went wrong: ${err.message}`);
     });
  }
 
 
-// uses input color from watchInput()
-// uses randomly selected category based on color input
 
 
 function getRandomNumber(i) {
@@ -76,13 +102,10 @@ function getCategory(colorName) {
 
 function watchInput() {
 
-// eventlistener to see what input is pressed
-// hide homepage elements, color-picker, and footer
-
-$("input").on("click", function(event) {
-    // $(".homepage").addClass("hidden");
-    // $("#footer").addClass("invisible");
-    // $("#header").addClass("invisible");
+$(".color-picker input").on("click", function(event) {
+    $(".homepage").addClass("hidden");
+    $("#footer").addClass("invisible");
+    $("#header").addClass("invisible");
    
     event.preventDefault();
 
@@ -91,14 +114,12 @@ $("input").on("click", function(event) {
     
     const category = getCategory(colorName);
 
-    // console.log(colorName);
-    // console.log(category);
-
     getImages(colorName, category);
 
+    showSlides();
+   
     })
 
-   
 }
 
 
