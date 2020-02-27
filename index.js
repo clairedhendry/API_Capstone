@@ -1,10 +1,22 @@
 "use strict"
 
 
-const searchUrl = `https://pixabay.com/api/?key=15386213-fd2b415b0403776dbc63e2f69`
+const searchUrl = ``
 
 function generateHomePage() {
-// generates HTML for home page
+  $(".homepage").append(
+      `<div class="color-picker">
+      <input id="red"></input>
+      <input id="purple"></input>
+      <input id="black"></input>
+      <input id="orange"></input>
+      <input id="white"></input>
+      <input id="grey"></input>
+      <input id="blue"></input>
+      <input id="green"></input>
+      <input id="yellow"></input>
+  </div>`
+  )
 }
 
 function generateSlideShow(responseJson) {
@@ -27,7 +39,6 @@ function generateSlideShow(responseJson) {
   
   function showSlides() {
  
-    
     let slides = document.getElementsByClassName("slides");
 
     for (let i = 0; i < slides.length; i++) {
@@ -42,7 +53,7 @@ function generateSlideShow(responseJson) {
     
     slides[slideIndex - 1].style.display = "block";
     
-    setTimeout(showSlides, 300000); 
+    setTimeout(showSlides, 3000); 
   }
 
 
@@ -68,6 +79,7 @@ function getImages(colorName, category) {
         }
     })
     .then(responseJson => generateSlideShow(responseJson))
+    .then(showSlides)
     .catch(err => {
         $("#error-message").text(`Something went wrong: ${err.message}`);
     });
@@ -114,14 +126,14 @@ $(".color-picker input").on("click", function(event) {
     
     const category = getCategory(colorName);
 
-    getImages(colorName, category);
+    getImages(colorName, category)
 
-    showSlides();
-   
+    
+    
     })
 
 }
 
 
-
+$(generateHomePage);
 $(watchInput)
