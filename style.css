@@ -13,7 +13,7 @@ body {
         "header header header header"
         "main main main main"
         "footer footer footer footer";
-    background-color: rgb(199, 198, 198);
+    /* background-color: rgb(199, 198, 198); */
 }
 
 .hidden {
@@ -28,10 +28,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     width: 100vw;
     height: auto;
+    
 }
+
 
 header {
     display: flex;
@@ -57,6 +58,7 @@ h1 {
     justify-items: center;
     margin-top: auto;
     margin-bottom: auto;
+    
     
 }
 
@@ -139,7 +141,7 @@ h1 {
     grid-row: 4;
 }
 
-.slideshow-container {
+/* .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -147,6 +149,14 @@ h1 {
 
 .slides {
     display: none;
+} */
+
+
+.slides {
+    display: none;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
 
@@ -166,6 +176,10 @@ h1 {
     from {opacity: .4}
     to {opacity: 1}
   }
+
+#pixabayLogo {
+    width: 75px;
+}
 
 footer {
     display: flex;

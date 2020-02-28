@@ -4,42 +4,42 @@ const imageCategories = [
     {
         color: "red",
         category:  [
-                "canyons", "sandstone", "lava", "sunset", "nature", "trees"
+                "sunset", "nature", "trees", "animals"
             ],
         mode: ["portrait", "landscape"]
     },
     {
         color: "orange",
         category: [
-                "Mars", "sunset", "desert", "nature", "trees"
+                "rocks", "desert", "nature", "trees"
         ],
         mode: ["portrait", "landscape"]
     },
     {
         color: "yellow",
         category: [
-                "desert", "flower", "beach", "nature", 
+                "flower", "beach", "nature", "animals" 
         ],
         mode: ["portrait", "landscape"]
     }, 
     {
         color: "green",
         category: [
-                "forest", "jungle", "meadow", "trees", "nature"
+                "forest", "jungle", "meadow", "trees", "nature", "animals"
         ],
         mode: ["portrait", "landscape"]
     },
     {
         color: "blue",
         category: [
-                "sky", "ocean", "beach", "water", "river", "waterfall", "nature"
+                "sky", "ocean", "beach", "water", "waterfall", "nature"
         ],
         mode: ["portrait", "landscape"]
     },
     {
         color: "purple",
         category: [
-                "sky", "cave", "stars", "nature"
+                "sky", "nature", "rain"
         ],
         mode: ["portrait", "landscape"]
     },
@@ -55,7 +55,7 @@ const imageCategories = [
         color: "black",
         API: "Pixabay",
         category: [
-                "stars", "dark"
+                "stars", "dark", "animals"
         ],
         mode: ["portrait", "landscape"]
     },
@@ -63,7 +63,7 @@ const imageCategories = [
         color: "grey",
         subcolor: "black+white",
         category: [
-            "rocks", "mountain", "cave"
+            "rocks", "mountains", "cave", "animals"
         ],
         mode: ["portrait", "landscape"]
     },
