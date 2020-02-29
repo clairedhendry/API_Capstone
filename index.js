@@ -12,22 +12,38 @@ const state = {
 
 // GENERATE ELEMENTS
 
-function generateHomePage() {
-  $(".homepage").append(
-      `
-        <div class="color-picker">
-        <input id="red"></input>
-        <input id="purple"></input>
-        <input id="black"></input>
-        <input id="orange"></input>
-        <input id="white"></input>
-        <input id="grey"></input>
-        <input id="blue"></input>
-        <input id="green"></input>
-        <input id="yellow"></input>          
-      </div>`);
+// function generateHomePage() {
+//   $(".homepage").append(
+//       `
+//         <div class="color-picker">
+//         <input id="red"></input>
+//         <input id="purple"></input>
+//         <input id="black"></input>
+//         <input id="orange"></input>
+//         <input id="white"></input>
+//         <input id="grey"></input>
+//         <input id="blue"></input>
+//         <input id="green"></input>
+//         <input id="yellow"></input>          
+//       </div>`);
       
-}
+// }
+
+function generateHomePage() {
+    $(".homepage").append(
+        `<div class="color-picker">
+            <button type="button" name="red button" id="red"></button>
+            <button type="button" name="purple button" id="purple"></button>
+            <button type="button" name="black button" id="black"></button>
+            <button type="button" name="orange button" id="orange"></button>
+            <button type="button" name="white button" id="white"></button>
+            <button type="button" name="grey button" id="grey"></button>
+            <button type="button" name="blue button" id="blue"></button>
+            <button type="button" name="green button" id="green"></button>
+            <button type="button" name="yellow button" id="yellow"></button>          
+        </div>`);
+        
+  }
 
 function generateSlideShow(state) {
     
@@ -36,9 +52,9 @@ function generateSlideShow(state) {
     
     for (let i = 0; i < state.data[0].hits.length; i++) {
         $(".slideshow-section").append(
-            `<div class="slides fade">
-            <img src=${state.data[0].hits[i].largeImageURL} alt=${state.data[0].hits[i].tags} style="width:100%"/>
-            </div>`  
+            `<button type="button" name="slideshow" class="slides fade">
+            <img src=${state.data[0].hits[i].webformatURL} alt=${state.data[0].hits[i].tags} style="width:100%"/>
+            </button>`  
          )
     } 
   }
@@ -120,7 +136,7 @@ function getSlideshowImages(colorName, category, orientation) {
 
 function watchInput() {
 
-$(".color-picker input").on("click", function(event) {
+$(".color-picker button").on("click", function(event) {
     
     state.data.length = 0;
     
@@ -128,6 +144,7 @@ $(".color-picker input").on("click", function(event) {
     $(".homepage").addClass("hidden");
     $("#footer").addClass("invisible");
     $("#header").addClass("hidden");
+    $("#credit").removeClass("invisible");
    
     let colorName = $(this).attr("ID"); 
     let category = getCategory(colorName);
@@ -151,9 +168,9 @@ function changeSlideshow() {
         clearTimeout(timeoutVariable);
         $(".slideshow-section").empty();
         $(".homepage").removeClass("hidden");
-        $("#footer").addClass("invisible");
+        $("#footer").removeClass("invisible");
         $("#header").removeClass("hidden");
-        $("#credit").addClass("hidden")
+        $("#credit").addClass("invisible")
 
         
     })

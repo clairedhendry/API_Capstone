@@ -43,6 +43,10 @@ body {
     cursor: pointer;
 }
 
+.slideshow-section > img {
+    max-height: fit-content;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -68,15 +72,24 @@ h1 {
     margin-bottom: auto;
 }
 
-.color-picker > input {
+.color-picker > button {
     width: 50px;
     height: 50px;
     cursor: pointer;
 }
 
-.color-picker > input:hover {
+.color-picker > button:hover {
     width: 60px;
     height: 60px;
+}
+
+button {
+    border-style: none;
+    background-color: white;
+}
+
+:focus {
+    outline: 3px solid red;
 }
 
 #red {
@@ -187,10 +200,12 @@ h1 {
 
 #pixabayLogo {
     width: 75px;
+    padding-left: 15px;
 }
 
 #credit {
-    
+    display: flex;
+    justify-content: center;
     grid-area: credit;
 }
 
@@ -218,4 +233,8 @@ footer > a {
         margin-bottom: auto;
     }
         
+    .slideshow-section > img {
+        max-height: 400px;
+    }
+
     }
