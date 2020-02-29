@@ -32,7 +32,7 @@ const state = {
 function generateHomePage() {
     $(".homepage").append(
         `<div class="color-picker">
-            <button type="button" name="red button" value="red" id="red"></button>
+            <button type="button" name="red button" value="red" id="red">red</button>
             <button type="button" name="purple button" value="purple" id="purple"></button>
             <button type="button" name="black button" value="black" id="black"></button>
             <button type="button" name="orange button" value="orange" id="orange"></button>
