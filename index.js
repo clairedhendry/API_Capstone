@@ -32,13 +32,12 @@ function generateHomePage() {
 function generateSlideShow(state) {
     
     $(".slideshow-section").removeClass("hidden");
+    $("#credit").removeClass("hidden");
     
     for (let i = 0; i < state.data[0].hits.length; i++) {
         $(".slideshow-section").append(
             `<div class="slides fade">
             <img src=${state.data[0].hits[i].largeImageURL} alt=${state.data[0].hits[i].tags} style="width:100%"/>
-            <p>Images from <a href="https://pixabay.com"><img id="pixabayLogo" src="misc/logo.png" alt="Pixabay logo"/></a>
-            </p>
             </div>`  
          )
     } 
@@ -61,7 +60,7 @@ function showSlides() {
         slideIndex = 1
     };
     slides[slideIndex - 1].style.display = "block";
-    timeoutVariable = setTimeout(showSlides, 3000); 
+    timeoutVariable = setTimeout(showSlides, 8000); 
     return timeoutVariable;
 }
 
@@ -88,12 +87,12 @@ function getCategory(colorName) {
 
 // FETCH CALLS
 
-function getSlideshowImages(colorName, category) {
+function getSlideshowImages(colorName, category, orientation) {
 
     const searchCategory = `${encodeURIComponent("q")}=${encodeURIComponent(category)}`
     const searchColor = `${encodeURIComponent("colors")}=${encodeURIComponent(colorName)}`
 
-    const queryField = searchUrl + `&` + searchCategory + `&image_type=photo&category=nature&orientation=portrait&safesearch="true"` + `&` + searchColor;
+    const queryField = searchUrl + `&` + searchCategory + `&image_type=photo&category=nature&orientation=${orientation}&safesearch="true"` + `&` + searchColor;
 
     fetch(queryField)
     .then(response => {
@@ -112,10 +111,9 @@ function getSlideshowImages(colorName, category) {
     .then(showSlides)
 
     .catch(err => {
-        $("#error-message").text(`Something went wrong: ${err.message}`);
+        $("#error-message").text(`Something went wrong: ${err.message}`).removeClass("hidden");
     });
  }
-
 
 
 // HANDLERS
@@ -124,20 +122,23 @@ function watchInput() {
 
 $(".color-picker input").on("click", function(event) {
     
-    
     state.data.length = 0;
     
     event.preventDefault();
     $(".homepage").addClass("hidden");
     $("#footer").addClass("invisible");
-    $("#header").addClass("invisible");
+    $("#header").addClass("hidden");
    
-    let colorName = $(this).attr("ID");
-       
+    let colorName = $(this).attr("ID"); 
     let category = getCategory(colorName);
-
-    getSlideshowImages(colorName, category)
-  
+    let maxWidth = window.matchMedia("(max-width: 500px)")
+    if (maxWidth.matches) {
+        let orientation = "vertical";
+        getSlideshowImages(colorName, category, orientation)
+    } else {
+        let orientation = "horizontal";
+        getSlideshowImages(colorName, category, orientation)
+    }
     })
 
 }
@@ -150,13 +151,13 @@ function changeSlideshow() {
         clearTimeout(timeoutVariable);
         $(".slideshow-section").empty();
         $(".homepage").removeClass("hidden");
-        $("#footer").removeClass("invisible");
-        $("#header").removeClass("invisible");
+        $("#footer").addClass("invisible");
+        $("#header").removeClass("hidden");
+        $("#credit").addClass("hidden")
 
         
     })
 }
-
 
 
 // IMPLEMENT

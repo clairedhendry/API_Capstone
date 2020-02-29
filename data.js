@@ -39,21 +39,12 @@ const imageCategories = [
     {
         color: "purple",
         category: [
-                "sky", "nature", "rain"
+                "sky", "nature", "flowers"
         ],
         mode: ["portrait", "landscape"]
     },
     {
         color: "black",
-        API: "NASA",
-        category: [
-                "stars", "nebula" 
-        ],
-        mode: ["portrait", "landscape"]
-    },
-    {
-        color: "black",
-        API: "Pixabay",
         category: [
                 "stars", "dark", "animals"
         ],
