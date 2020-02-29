@@ -33,14 +33,14 @@ function generateHomePage() {
     $(".homepage").append(
         `<div class="color-picker">
             <button type="button" name="red button" value="red" id="red">red</button>
-            <button type="button" name="purple button" value="purple" id="purple"></button>
-            <button type="button" name="black button" value="black" id="black"></button>
-            <button type="button" name="orange button" value="orange" id="orange"></button>
-            <button type="button" name="white button" value="white" id="white"></button>
-            <button type="button" name="grey button" value="grey" id="grey"></button>
-            <button type="button" name="blue button" value="blue" id="blue"></button>
-            <button type="button" name="green button" value="green" id="green"></button>
-            <button type="button" name="yellow button" value="yellow" id="yellow"></button>          
+            <button type="button" name="purple button" value="purple" id="purple">purple</button>
+            <button type="button" name="black button" value="black" id="black">black</button>
+            <button type="button" name="orange button" value="orange" id="orange">orange</button>
+            <button type="button" name="white button" value="white" id="white">white</button>
+            <button type="button" name="grey button" value="grey" id="grey">grey</button>
+            <button type="button" name="blue button" value="blue" id="blue">blue</button>
+            <button type="button" name="green button" value="green" id="green">green</button>
+            <button type="button" name="yellow button" value="yellow" id="yellow">yellow</button>          
         </div>`);
         
   }
