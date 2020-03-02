@@ -14,9 +14,7 @@ body {
         "main main main main"
         "credit credit credit credit"
         "footer footer footer footer";
-    font-family: "Spartan";
-  
-    
+    font-family: "Spartan";    
 }
 
 .hidden {
@@ -162,7 +160,6 @@ button {
     grid-row: 4;
 }
 
-
 #yellow {
     background-color: yellow;
     border: 3px solid black;
@@ -170,8 +167,6 @@ button {
     grid-column: 6;
     grid-row: 4;
 }
-
-
 
 .slides {
     display: none;
@@ -209,7 +204,6 @@ button {
     
     padding-left: 40px;
     padding-right: 40px;
-    /* font-size: medium; */
 }
 
 #credit {
