@@ -8,12 +8,14 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 50px auto 40px 50px;
+    grid-template-rows: 60px auto 40px 50px;
     grid-template-areas: 
         "header header header header"
         "main main main main"
         "credit credit credit credit"
         "footer footer footer footer";
+    font-family: "Spartan";
+  
     
 }
 
@@ -31,6 +33,7 @@ body {
     justify-content: center;
     width: 100vw;
     max-height: 90vh;
+    overflow: hidden;
  
 }
 
@@ -49,17 +52,17 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
-    grid-area: header;
-   
+    grid-area: header;  
 }
 
 h1 {
     text-align: center;
-    margin: 0;
-    
+    margin-top: auto;
+    margin-bottom: 0;    
 }
 
 .color-picker {
@@ -68,6 +71,7 @@ h1 {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(4, 100px);
     justify-items: center;
+    align-items: center;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -78,6 +82,7 @@ h1 {
     cursor: pointer;
 }
 
+
 .color-picker > button:hover {
     width: 60px;
     height: 60px;
@@ -87,8 +92,6 @@ button {
     border-style: none;
     background-color: white;
 }
-
-
 
 :focus {
     outline: 3px solid red;
@@ -214,11 +217,21 @@ button {
     padding-left: 15px;
 }
 
+.next-color {
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    /* font-size: medium; */
+}
+
 #credit {
     display: flex;
     justify-content: center;
     grid-area: credit;
 }
+
 
 footer {
     display: flex;
@@ -231,21 +244,49 @@ footer > a {
     color: black;
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 500px) {
 
     .color-picker {
         max-height: 300px;
         grid-area: main;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(4, 60px);
+        grid-template-rows: repeat(4, 50px);
         justify-items: center;
         margin-top: auto;
         margin-bottom: auto;
     }
         
+    .color-picker > button {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 16pt;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     .slideshow-section > img {
         max-height: 400px;
     }
-
     }
+
+@media screen and (min-height: 800px) {
+    .slideshow-section {
+        height: auto;
+    }
+    .color-picker {
+        grid-template-rows: repeat(4, 200px);
+    }
+}
+
+    @media screen and (min-width: 700px) {
+        
+    body {
+        grid-template-rows: 100px auto 40px 50px;
+    }
+
+}
+

@@ -8,12 +8,14 @@
     <meta name="description" content="An app to generate a slideshow of randomly selected nature photos based on your color choice.">
     <link rel="icon" href="misc/favicon.ico" type="images/x-icon">
     <link type="text/css" rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
         <h1 id="header">Choose a color</h1>
+        <p id="next-color" class="hidden">Click on the slideshow to choose another color</p>
     </header>
 
     <main role="main" class="main-container">
@@ -31,6 +33,7 @@
     </main>
     <p id="credit" class="invisible">Images from <a href="https://pixabay.com" target="_blank"><img id="pixabayLogo" src="misc/logo.png" alt="Pixabay logo"/></a>
     </p>
+    
     <footer id="footer"><a href="https://clairedhendry.github.io/Portfolio/" target="_blank">2020 Claire Hendry</a></footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
