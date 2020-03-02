@@ -198,12 +198,16 @@ button {
     padding-left: 15px;
 }
 
-.next-color {
-    display: flex;
-    flex-direction: column;
+#next-color {
     
-    padding-left: 40px;
-    padding-right: 40px;
+    flex-direction: column;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    text-align: center;
+    font-size: small;
+    width: 80%;
 }
 
 #credit {
@@ -253,7 +257,13 @@ footer > a {
     }
     }
 
-@media screen and (min-height: 800px) {
+@media screen and (min-height: 675px) {
+    .color-picker {
+        grid-template-rows: repeat(4, 150px);
+    }
+}
+
+@media screen and (min-height: 850px) {
     .slideshow-section {
         height: auto;
     }
@@ -270,6 +280,10 @@ footer > a {
         
     body {
         grid-template-rows: 100px auto 40px 50px;
+    }
+
+    #next-color {
+        font-size: unset;
     }
 
 }
