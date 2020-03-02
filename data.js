@@ -32,7 +32,7 @@ const imageCategories = [
     {
         color: "blue",
         category: [
-                "sky", "ocean", "beach", "water", "waterfall", "nature"
+                "sky", "ocean", "beach", "lakes", "waterfall", "nature"
         ],
         mode: ["portrait", "landscape"]
     },
