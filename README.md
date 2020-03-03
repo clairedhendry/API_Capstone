@@ -1,4 +1,4 @@
-# Name: Nature Image Generator
+# Nature Image Generator
 ============================
 
 [Live](https://clairedhendry.github.io/Nature-Image-Generator/ "Nature Image Generator")
@@ -30,11 +30,11 @@ Homepage / Color Selector for Desktop/Landscape View
 
 Example Image for Mobile/Portrait View
 
-![Image](misc/example-image-portrait)
+![Image](misc/example-image-portrait.png)
 
 Example Image for Desktop/Landscape View
 
-![Image](misc/example-image-landscape)
+![Image](misc/example-image-landscape.png)
 
 ### Technology Used
 
