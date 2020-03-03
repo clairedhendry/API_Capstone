@@ -57,12 +57,11 @@ function showSlides() {
   let slides = document.getElementsByClassName("slides");
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-  }
-
+  };
   slideIndex++;
   if (slideIndex > slides.length) {
     slideIndex = 1;
-  }
+  };
   slides[slideIndex - 1].style.display = "block";
   timeoutVariable = setTimeout(showSlides, 5000);
   return timeoutVariable;
@@ -168,6 +167,5 @@ function changeSlideshow() {
 // IMPLEMENT
 
 $(generateHomePage);
-
 $(watchInput);
 $(changeSlideshow);
