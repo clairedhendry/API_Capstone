@@ -1,290 +1,289 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 60px auto 40px 50px;
-    grid-template-areas: 
-        "header header header header"
-        "main main main main"
-        "credit credit credit credit"
-        "footer footer footer footer";
-    font-family: "Spartan";    
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60px auto 40px 50px;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "credit credit credit credit"
+    "footer footer footer footer";
+  font-family: "Spartan";
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    max-height: 90vh;
-    overflow: hidden;
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  max-height: 90vh;
+  overflow: hidden;
 }
 
 .slideshow-section > .slides {
-    max-height: 70vh;
-    overflow: hidden;
+  max-height: 70vh;
+  overflow: hidden;
 }
 
 .slideshow-section {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .slideshow-section > img {
-    max-height: fit-content;
+  max-height: fit-content;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    grid-area: header;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  grid-area: header;
 }
 
 h1 {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 0;    
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .color-picker {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(4, 100px);
-    justify-items: center;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  justify-items: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .color-picker > button {
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
 }
 
-
 .color-picker > button:hover {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 button {
-    border-style: none;
-    background-color: white;
+  border-style: none;
+  background-color: white;
 }
 
 :focus {
-    outline: 3px solid red;
+  outline: 3px solid red;
 }
 
 #red {
-    background-color: red;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 4;
-    grid-row: 1;
+  background-color: red;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 4;
+  grid-row: 1;
 }
 
 #purple {
-    background-color: purple;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 2;
-    grid-row: 2;
+  background-color: purple;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 #black {
-    background-color: black;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 4;
-    grid-row: 2;
+  background-color: black;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 4;
+  grid-row: 2;
 }
 
-
 #orange {
-    background-color: orange;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 6;
-    grid-row: 2;
+  background-color: orange;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 6;
+  grid-row: 2;
 }
 
 #white {
-    background-color: white;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 3;
-    grid-row: 3;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 3;
+  grid-row: 3;
 }
 
 #grey {
-    background-color: grey;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 5;
-    grid-row: 3;
+  background-color: grey;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 5;
+  grid-row: 3;
 }
 
 #blue {
-    background-color: blue;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 2;
-    grid-row: 4;
+  background-color: blue;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 2;
+  grid-row: 4;
 }
 
 #green {
-    background-color: green;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 4;
-    grid-row: 4;
+  background-color: green;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 4;
+  grid-row: 4;
 }
 
 #yellow {
-    background-color: yellow;
-    border: 3px solid black;
-    border-radius: 50%;
-    grid-column: 6;
-    grid-row: 4;
+  background-color: yellow;
+  border: 3px solid black;
+  border-radius: 50%;
+  grid-column: 6;
+  grid-row: 4;
 }
 
 .slides {
-    display: none;
-    width: auto;
-    max-height: 400px;
-    position: relative;
-    margin: auto;
+  display: none;
+  width: auto;
+  max-height: 400px;
+  position: relative;
+  margin: auto;
 }
 
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 3s;
-    animation-name: fade;
-    animation-duration: 3s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+  from {
+    opacity: 0.4;
   }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+  to {
+    opacity: 1;
   }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 #pixabayLogo {
-    width: 75px;
-    padding-left: 15px;
+  width: 75px;
+  padding-left: 15px;
 }
 
 #next-color {
-    
-    flex-direction: column;
-    margin-top: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
-    text-align: center;
-    font-size: small;
-    width: 80%;
+  flex-direction: column;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  text-align: center;
+  font-size: small;
+  width: 80%;
 }
 
 #credit {
-    display: flex;
-    justify-content: center;
-    grid-area: credit;
+  display: flex;
+  justify-content: center;
+  grid-area: credit;
 }
 
-
 footer {
-    display: flex;
-    justify-content: center;
-    grid-area: footer;
+  display: flex;
+  justify-content: center;
+  grid-area: footer;
 }
 
 footer > a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-height: 500px) {
+  .color-picker {
+    max-height: 300px;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 50px);
+    justify-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
-    .color-picker {
-        max-height: 300px;
-        grid-area: main;
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(4, 50px);
-        justify-items: center;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-        
-    .color-picker > button {
-        width: 40px;
-        height: 40px;
-    }
+  .color-picker > button {
+    width: 40px;
+    height: 40px;
+  }
 
-    h1 {
-        font-size: 16pt;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+  h1 {
+    font-size: 16pt;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
-    .slideshow-section > img {
-        max-height: 400px;
-    }
-    }
+  .slideshow-section > img {
+    max-height: 400px;
+  }
+}
 
 @media screen and (min-height: 675px) {
-    .color-picker {
-        grid-template-rows: repeat(4, 150px);
-    }
+  .color-picker {
+    grid-template-rows: repeat(4, 150px);
+  }
 }
 
 @media screen and (min-height: 850px) {
-    .slideshow-section {
-        height: auto;
-    }
-    .color-picker {
-        grid-template-rows: repeat(4, 200px);
-    }
-    .color-picker > button {
-        width: 75px;
-        height: 75px;
-    }
+  .slideshow-section {
+    height: auto;
+  }
+  .color-picker {
+    grid-template-rows: repeat(4, 200px);
+  }
+  .color-picker > button {
+    width: 75px;
+    height: 75px;
+  }
 }
 
-    @media screen and (min-width: 700px) {
-        
-    body {
-        grid-template-rows: 100px auto 40px 50px;
-    }
+@media screen and (min-width: 700px) {
+  body {
+    grid-template-rows: 100px auto 40px 50px;
+  }
 
-    #next-color {
-        font-size: large;
-    }
-
+  #next-color {
+    font-size: large;
+  }
 }
-
