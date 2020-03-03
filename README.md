@@ -1,10 +1,10 @@
 # Nature Image Generator
-============================
+
 
 [Live](https://clairedhendry.github.io/Nature-Image-Generator/ "Nature Image Generator")
-----------------------------------------------------------------------------------------
 
-## About
+
+### About
 
 Nature Image Generator creates a unique slideshow of images based on color input. Each color generates an image collection of nature/landscape images that fall into that color range. 
 
@@ -12,7 +12,7 @@ TO USE:
 Choose a color to begin the slideshow.
 Click on the slideshow at anytime to choose a new color.
 
-Images are fetched using the [Pixabay](https://www.pixabay.com) API. 
+Images are fetched using the [Pixabay](https://www.pixabay.com "Pixabay.com") API. 
 
 ### Future Features
 
