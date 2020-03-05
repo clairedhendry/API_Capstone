@@ -46,7 +46,7 @@ const imageCategories = [
     {
         color: "grey",
         category: [
-            "rocks", "mountains", "cave", "animals"
+            "rocks", "mountains", "cave"
         ],
     },
     {

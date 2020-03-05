@@ -13,15 +13,15 @@ const state = {
 function generateHomePage() {
   $(".homepage").append(
     `<div class="color-picker">
-            <button type="button" name="red button" aria-label="red" id="red"></button>
-            <button type="button" name="purple button" aria-label="purple" id="purple"></button>
-            <button type="button" name="black button" aria-label="black" id="black"></button>
-            <button type="button" name="orange button" aria-label="orange" id="orange"></button>
-            <button type="button" name="white button" aria-label="white" id="white"></button>
-            <button type="button" name="grey button" aria-label="grey" id="grey"></button>
-            <button type="button" name="blue button" aria-label="blue" id="blue"></button>
-            <button type="button" name="green button" aria-label="green" id="green"></button>
-            <button type="button" name="yellow button" aria-label="yellow" id="yellow"></button>          
+            <button type="button" name="red button" aria-label="red" id="red"><img src="misc/sun.svg" alt="sun icon"/></button>
+            <button type="button" name="purple button" aria-label="purple" id="purple"><img src="misc/jewel.svg" alt="jewel icon"/></button>
+            <button type="button" name="black button" aria-label="black" id="black"><img src="misc/star.svg" alt="star icon"/></button>
+            <button type="button" name="orange button" aria-label="orange" id="orange"><img src="misc/sand.svg" alt="sand icon"/></button>
+            <button type="button" name="white button" aria-label="white" id="white"><img src="misc/ice.svg" alt="ice icon"/></button>
+            <button type="button" name="grey button" aria-label="grey" id="grey"><img src="misc/mountain.svg" alt="mountain icon"/></button>
+            <button type="button" name="blue button" aria-label="blue" id="blue"><img src="misc/water.svg" alt="water icon"/></button>
+            <button type="button" name="green button" aria-label="green" id="green"><img src="misc/leaf.svg" alt="leaf icon"/></button>
+            <button type="button" name="yellow button" aria-label="yellow" id="yellow"><img src="misc/flower.svg" alt="flower icon"/></button>          
         </div>`
   );
 }
